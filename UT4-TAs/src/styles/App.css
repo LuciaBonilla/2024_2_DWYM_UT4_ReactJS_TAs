@@ -1,0 +1,24 @@
+.app {
+  color: #2e034b;
+
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.card {
+  background-color: #c2c50f;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 5px 5px #edac20;
+
+  max-width: 500px;
+  min-width: 250px;
+  flex: 1 1 0;
+}
+
+.text-input {
+  color: #edac20;
+}
