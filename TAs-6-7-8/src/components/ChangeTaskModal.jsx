@@ -32,6 +32,19 @@ function ChangeTaskModal({ isShowing, handleHideModal }) {
      */
     const { handleEditTask } = useTasksContext();
 
+    /**
+     * EVENTO: Limpia los inputs.
+     */
+    function handleCleanInputs() {
+        setTitle("");
+        setDescription("");
+        setAssignedTo("");
+        setPriority("High");
+        setStatus("Backlog");
+        setStartDate("");
+        setEndDate("");
+    }
+
     return (
         <div className={`change-task-modal ${isShowing ? "over" : "down"}`}>
             <form className="change-task-modal-form">
@@ -108,6 +121,8 @@ function ChangeTaskModal({ isShowing, handleHideModal }) {
                 <button className="change-task-modal-form__button change-task-modal-form__button--cancel-task" onClick={(event) => {
                     event.preventDefault();
                     handleHideModal();
+                    handleCleanInputs();
+                    setTaskToEditID(null);
                 }}>CANCELAR</button>
 
                 {/* Botón para editar tarea. */}
