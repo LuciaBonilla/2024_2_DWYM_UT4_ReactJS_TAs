@@ -22,7 +22,7 @@ export function TaskManager({ children }) {
     const [tasks, setTasks] = useState([]);
 
     /**
-     * ESTADO: ID de la nueva tarea.
+     * ESTADO: ID de la nueva tarea. Arranca en 0.
      */
     const [newTaskID, setNewTaskID] = useState(0);
 

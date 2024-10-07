@@ -17,6 +17,7 @@ function Timer({ unmountMe }) {
 
         // Cancela la acción del timer al desmontar.
         return () => clearInterval(timerID); // Sólo ejecuta el return al desmontar.
+        // También ejecuta el return si el componente se re renderiza (ya que desmonta y vuelve a montar).
     }, [seconds]); // useEffect se ejecuta cada vez que cambia seconds.
 
     return (
